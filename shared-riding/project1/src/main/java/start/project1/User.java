@@ -3,14 +3,23 @@ package start.project1;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.xml.bind.annotation.XmlRootElement;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+@Entity
 public class User {
-
+	
+	@Id
 	private String id;
 	private String name;
+	
+	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<Place> places = new ArrayList<Place>();
 	
 	public String getId()	{
@@ -36,13 +45,15 @@ public class User {
 	
 	public void addPlace(Place place) {
 		for (Place p : places) {
-			if (p == place) return;
+			if (p.getId().equalsIgnoreCase(place.getId())) return;
 		}
 		
 		places.add(place);
 	}
 
 	public boolean hasBeenTo(Place place) {
-		return places.contains(place);
+		for (Place p : places)
+			if (p.getId().equalsIgnoreCase(place.getId())) return true;
+		return false;
 	}
 }

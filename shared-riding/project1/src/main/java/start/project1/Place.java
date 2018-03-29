@@ -1,9 +1,14 @@
 package start.project1;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+@Entity
 public class Place {
 
+	@Id
 	private String id;
 	private String name;
 	private String imgUrl;

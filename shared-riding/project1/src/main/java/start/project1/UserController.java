@@ -60,7 +60,7 @@ public class UserController {
 		
 		Place newPlace = dataStore.getPlaceById(updateInfo.getPlaceId());
 		if (newPlace != null) {
-			desiredUser.addPlace(newPlace);
+			dataStore.updateUser(desiredUser, newPlace);
 			return Response.ok("user updated").build();
 		}
 		return Response.status(404).entity("no such place").build();

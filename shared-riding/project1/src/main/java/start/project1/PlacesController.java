@@ -18,7 +18,7 @@ import org.springframework.stereotype.Component;
 public class PlacesController {
 	@Autowired
 	private DataStore dataStore;
-	
+		
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getPlaces()	{
