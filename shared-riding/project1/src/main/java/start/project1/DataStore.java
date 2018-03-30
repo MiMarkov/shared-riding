@@ -51,6 +51,8 @@ public class DataStore {
 		return result;
 	}
 	
+	// TODO: we need a method like getUi5Users for the place
+	// so we can place em in a ui5 list
 	public List<String> getPlaces() {
 		loadFromDb();
 		

@@ -16,6 +16,9 @@
          }' >
       </script>
       <script>
+      	// in order for this to work the "resources" folder of UI5 must be in the same
+      	// directory as index.html and it needs to be called "ui5" (it is in gitignore)
+      	// that or the src parameter above must be changed
          sap.ui.getCore().attachInit(function () {
         	 new sap.m.Shell({
 	        	app : new sap.ui.core.ComponentContainer({

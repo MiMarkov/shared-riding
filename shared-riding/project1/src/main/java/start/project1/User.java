@@ -19,6 +19,7 @@ public class User {
 	private String id;
 	private String name;
 	
+	// if fetch != EAGER places won't be loaded
 	@OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
 	private List<Place> places = new ArrayList<Place>();
 	

@@ -2,6 +2,7 @@ package start.project1;
 
 import java.util.Calendar;
 
+// not used anymore
 public class TimeData {
 	private long unixTime;
 	private float timeZone;

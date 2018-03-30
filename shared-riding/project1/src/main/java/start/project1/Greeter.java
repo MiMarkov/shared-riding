@@ -8,6 +8,8 @@ import javax.ws.rs.core.Response;
 
 import org.springframework.stereotype.Component;
 
+// not used anymore
+
 @Component
 @Path("/hello")
 public class Greeter {

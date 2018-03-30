@@ -22,7 +22,9 @@ public class UserController {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response listUsers(@DefaultValue("small") @QueryParam("mode") String mode)
 	{
+		// returns a list of user IDs
 		if (mode.equalsIgnoreCase("small")) return Response.ok(dataStore.getUsers()).build();
+		// return an Ui5-friendly list of user IDs and names
 		if (mode.equalsIgnoreCase("ui5")) return Response.ok(dataStore.getUi5Users()).build();
 		
 		return Response.status(400).entity("unrecognized parameter value").build();
@@ -51,6 +53,7 @@ public class UserController {
 		return Response.ok("user added").build();
 	}
 	
+	// TODO: make this method be able to update the user's display name
 	@PUT
 	@Path("update")
 	@Consumes(MediaType.APPLICATION_JSON)

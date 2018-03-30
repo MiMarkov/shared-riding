@@ -13,6 +13,8 @@ import javax.ws.rs.core.MediaType;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+// TODO: make a place update routine where you can change the display name and image
+
 @Component
 @Path("/places")
 public class PlacesController {

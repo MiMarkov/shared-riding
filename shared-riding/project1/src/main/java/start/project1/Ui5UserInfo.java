@@ -1,5 +1,8 @@
 package start.project1;
 
+// we need this because Ui5 wants objects to have key-value pairs
+// and the normal User contains a list of places
+// which we don't need in most cases
 public class Ui5UserInfo {
 
 	private String id;
