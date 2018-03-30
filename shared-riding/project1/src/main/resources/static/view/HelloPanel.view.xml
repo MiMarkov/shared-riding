@@ -1,0 +1,22 @@
+<mvc:view controllerName="pack1.controller.HelloPanel" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc">
+	<panel headerText="sin x" class="sapUiResponsiveMargin"
+		width="auto">
+		<content> 
+			   <Button
+			      text="Say Hello"
+			      press="onShowHello"
+			      class="sapUiSmallMargin"/>
+			   <Input
+			      value="{/recipient/name}"
+			      valueLiveUpdate="true"
+			      width="20%"
+			      class="sapUiSmallMargin"/>
+			   <Input
+			   	  value="{/recipient/secondName}"
+			   	  description="you entered {/recipient/name} {/recipient/secondName}"
+			   	  valueLiveUpdate="true"
+			   	  width="60%"
+			   	  class="sapUiSmallMargin" />
+	   			</content>   					
+   	</panel>
+</mvc:view>

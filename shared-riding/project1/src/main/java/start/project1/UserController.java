@@ -20,9 +20,12 @@ public class UserController {
 	
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response listUsers()
+	public Response listUsers(@DefaultValue("small") @QueryParam("mode") String mode)
 	{
-		return Response.ok(dataStore.getUsers()).build();
+		if (mode.equalsIgnoreCase("small")) return Response.ok(dataStore.getUsers()).build();
+		if (mode.equalsIgnoreCase("ui5")) return Response.ok(dataStore.getUi5Users()).build();
+		
+		return Response.status(400).entity("unrecognized parameter value").build();
 	}
 	
 	@GET

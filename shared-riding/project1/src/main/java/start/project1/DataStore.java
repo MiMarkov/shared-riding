@@ -43,6 +43,14 @@ public class DataStore {
 		return result;
 	}
 	
+	public Ui5UserList getUi5Users() {
+		loadFromDb();
+		
+		Ui5UserList result = new Ui5UserList();
+		for (User u : users) result.add(new Ui5UserInfo(u));
+		return result;
+	}
+	
 	public List<String> getPlaces() {
 		loadFromDb();
 		

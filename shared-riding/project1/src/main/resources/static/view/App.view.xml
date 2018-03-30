@@ -1,0 +1,17 @@
+<mvc:View
+   controllerName="pack1.controller.App"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc"
+   displayBlock="true">
+   <App>
+   		<pages>
+   			<page title="Homepage">
+   				<content>
+   					 <mvc:XMLView viewName="pack1.view.UserList"/>
+   				</content>
+   			</page>   		
+   		</pages>
+   </App>
+   
+   
+</mvc:View>
