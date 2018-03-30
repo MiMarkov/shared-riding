@@ -25,11 +25,6 @@ sap.ui.define([
          //};
          //var oModel = new JSONModel(oData);
          //this.setModel(oModel);
-         
-         var dataModel = new JSONModel();
-		 dataModel.loadData("http://localhost:8080/api/users?mode=ui5", null, true, "GET");
-		 console.log(dataModel);
-		 this.setModel(dataModel);
       }
    });
 });

@@ -1,11 +1,12 @@
 <mvc:view xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="pack1.controller.UserList">
 	<List
+	  id="userList1"
       headerText="List of users"
       class="sapUiResponsiveMargin"
       width="auto"
-      items="{/users}">
+      items="{userData>/users}">
       <items>
-         <ObjectListItem title="{name}"> </ObjectListItem>
+         <ObjectListItem title="{userData>name}"> </ObjectListItem>
       </items>
    </List>
 </mvc:view>
